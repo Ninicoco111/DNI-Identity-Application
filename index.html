@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>D.N.I. — Identity Replacement Department</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="top-strip"><span>THE DEPARTMENT OF NEW IDENTITIES</span><span>EST. 1984 · OFFICE 06</span></div>
+  <main class="desk">
+    <div class="desk-details" aria-hidden="true"><div class="coffee-ring"></div><div class="paperclip">⌁</div></div>
+    <article class="document">
+      <header class="document-header">
+        <div class="seal"><img src="assets/seal.svg" alt="Department insignia"></div>
+        <div class="agency"><div class="eyebrow">REPUBLIC OF SECOND CHANCES</div><strong>DEPARTMENT OF<br>NEW IDENTITIES</strong><span>Office of Personal Reassignment</span></div>
+        <div class="file-number">FILE NO.<br><strong>DNI–001</strong><br>CLASSIFIED<br>★ ★ ★</div>
+      </header>
+      <div class="rule"></div>
+      <section id="welcome" class="screen">
+        <div class="section-marker">PUBLIC NOTICE / FORM 001-A</div>
+        <h1>TIRED OF<br><em>BEING YOURSELF?</em></h1>
+        <p class="lead">You may be eligible for an entirely new identity. Please complete the necessary paperwork. Happiness is not guaranteed.</p>
+        <div class="hero-art"><img src="assets/identity-desk.svg" alt="Illustration of a vintage office desk with an identity dossier, rubber stamp, and keys"></div>
+        <div class="notice"><strong>IMPORTANT NOTICE</strong><p>Previous identities may be discontinued. Outstanding debts, embarrassing memories, and library fines are non-transferable. The Department accepts no responsibility for who you become.</p></div>
+        <button class="primary" id="beginBtn" type="button">BEGIN APPLICATION <span>↗</span></button>
+        <p class="micro center">PLEASE TAKE A NUMBER. THERE IS NO NUMBER MACHINE.</p>
+      </section>
+      <section id="application" class="screen hidden">
+        <div class="section-marker">CONFIDENTIAL / FORM 001-B</div>
+        <h2>Identity Replacement<br><em>Application</em></h2>
+        <p class="intro">All questions are mandatory. Dishonesty is permitted but discouraged by the stationery department.</p>
+        <form id="identityForm">
+          <div class="field"><label for="applicant">01 / CURRENT LEGAL(ISH) NAME</label><input id="applicant" name="applicant" type="text" maxlength="36" placeholder="Your current identity" required><small>We promise to misplace this information responsibly.</small></div>
+          <fieldset class="field"><legend>02 / WHY ARE YOU REQUESTING A REPLACEMENT?</legend>
+            <label class="choice"><input type="radio" name="reason" value="restart" required><span><b>A</b> I deserve a fresh start.</span></label>
+            <label class="choice"><input type="radio" name="reason" value="escape"><span><b>B</b> My past keeps following me.</span></label>
+            <label class="choice"><input type="radio" name="reason" value="bored"><span><b>C</b> I am simply bored of myself.</span></label>
+          </fieldset>
+          <fieldset class="field"><legend>03 / WHAT WOULD YOU LIKE TO KEEP?</legend>
+            <label class="choice"><input type="radio" name="keep" value="memories" required><span><b>A</b> My memories, even the awkward ones.</span></label>
+            <label class="choice"><input type="radio" name="keep" value="money"><span><b>B</b> My money. Obviously.</span></label>
+            <label class="choice"><input type="radio" name="keep" value="nothing"><span><b>C</b> Absolutely nothing.</span></label>
+          </fieldset>
+          <div class="fine-print">BY SUBMITTING THIS FORM, YOU ACKNOWLEDGE THAT THE DEPARTMENT MAY MAKE QUESTIONABLE DECISIONS.</div>
+          <button class="primary" type="submit">SUBMIT FOR REVIEW <span>↗</span></button>
+        </form>
+        <button class="text-button" id="backBtn" type="button">← RETURN TO NOTICE</button>
+      </section>
+      <section id="result" class="screen hidden" aria-live="polite">
+        <div class="section-marker">OFFICIAL DECISION / FORM 001-C</div>
+        <h2>Application<br><em>Determination</em></h2>
+        <div class="result-meta"><span>APPLICANT: <strong id="resultName"></strong></span><span>CASE: DNI–<strong id="caseNumber"></strong></span></div>
+        <div class="result-paper"><div class="result-label">OFFICE OF FINAL(ISH) DECISIONS</div><div id="stamp" class="stamp">APPROVED</div><h3 id="resultTitle"></h3><p id="resultMessage"></p><div class="signature">Authorized by: <span>Department of Questionable Choices</span></div></div>
+        <div class="notice small"><strong>NOTICE OF APPEAL</strong><p>All decisions are final until you press the button below.</p></div>
+        <button class="primary" id="againBtn" type="button">FILE ANOTHER APPLICATION <span>↗</span></button>
+      </section>
+      <footer class="document-footer"><span>D.N.I. · YOUR PAST IS OUR PAPERWORK</span><span>DO NOT FOLD · DO NOT QUESTION</span></footer>
+    </article>
+    <div class="desk-caption">A TOTALLY FICTIONAL GOVERNMENT SERVICE · NO REAL IDENTITIES WILL BE ALTERED</div>
+  </main>
+</body>
+</html>
